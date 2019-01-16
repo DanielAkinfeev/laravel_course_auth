@@ -13,8 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
+Route::post('/', 'EmailController@sendEmail')->name('send_photo');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/emails', 'HomeController@index')->name('emails');
