@@ -16,6 +16,6 @@ Route::get('/', function () {
 })->name('index');
 Route::post('/', 'EmailController@sendEmail')->name('send_photo');
 
-Auth::routes();
+Auth::routes(['register' => false, 'verify' => false]);
 
 Route::get('/emails', 'HomeController@index')->name('emails');

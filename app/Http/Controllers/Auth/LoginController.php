@@ -40,4 +40,8 @@ class LoginController extends Controller
     public function username() {
         return 'name';
     }
+
+    public function redirectTo() {
+        return route('emails');
+    }
 }
